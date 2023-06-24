@@ -68,7 +68,8 @@ app.get('/people', async (req, res) => {
 });
 
 mongoose.connect(
-  'mongodb://localhost:27017/swfavorites',
+  //domain에 db서버의 컨테이너 이름
+  'mongodb://mongodb:27017/swfavorites',
   { useNewUrlParser: true },
   (err) => {
     if (err) {
